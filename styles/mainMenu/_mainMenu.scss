@@ -1,0 +1,15 @@
+.main-menu {
+  font-size: 16px;
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__item {
+    padding: 15px 55px;
+  }
+  &__link {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,37 @@
+.about-us {
+  .section__name {
+    margin-left: calc(50% + 20px);
+    margin-bottom: 20px;
+    
+  }
+  .section__title {
+    font-size: 64px;
+    margin-bottom: 20px;
+  }
+  &__floaty-mc-float {
+    float: left;
+    width: calc(50% + 15px);
+    height: 33vh;
+  }
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: flex-start
+  }
+  &__item {
+    width: 33%;
+    .about-us__item-text {
+      max-width: 400px;
+    }
+    &:nth-child(1) {
+      width: calc(50% + 15px);
+      .about-us__item-text {
+        max-width: 600px;
+      }
+    }
+    &:last-child {
+      margin-left: calc(50% + 15px);
+    }
+  }
+}
