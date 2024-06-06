@@ -8,4 +8,38 @@
     text-align: center;
     text-transform: uppercase;
   }
+  &__head {
+    margin-bottom: 20vh;
+  }
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  &__item {
+    width: 31%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1vh;
+  }
+  &__inum {
+    font-size: 18px;
+    color: #898989;
+    align-self: flex-end;
+  }
+  &__point {
+    font-size: 6rem;
+    margin-bottom: 1vh;
+  }
+  &__idesc-main {
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  &__idesc-small {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
 }

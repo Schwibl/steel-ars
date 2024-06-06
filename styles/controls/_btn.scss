@@ -10,13 +10,31 @@
   border: 1px solid #fff;
   padding: 15px 55px;
   border-radius: 20px;
-  &_order {
+  transition: .3s all ease;
+  position: relative;
+  &:hover {
+    transform: scale(1.2);
+    background-color: #898989;
+    color: #000;
+    z-index: 2;
+  }
+  &_blue {
     background-color: #3548FE;
     border-color: #3548FE;
+    &:hover {
+      background-color: #3548FE;
+      color: #fff;
+    }
+
   }
   &_active {
     background-color: #fff;
     color: #000;
+    &:hover {
+      transform: scale(1);
+      background-color: #fff;
+      color: #000;
+    }
   }
   &__icon {
     font-size: 0;
