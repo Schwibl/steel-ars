@@ -8,8 +8,7 @@
   &__name {
     border-radius: 300px;
     border: 1px solid #fff;
-    text-transform: uppercase;
-    font-size: 16px;
+    @extend .smaller-text;
     text-align: center;
     padding: 5px 25px;
     width: max-content;
@@ -17,11 +16,71 @@
   &__title {
     font-size: 64px;
     font-family: Montserrat;
-    text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     line-height: 1.2;
+    @media screen and (max-width: 1400px) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: 980px) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 22px;
+    }
+  }
+}
+
+.bigger-title {
+  word-break: break-word;
+  font-size: 6rem;
+  @media screen and (max-width: 1400px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 980px) {
+    font-size: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.smaller-title {
+  font-size: 36px;
+  font-weight: 300;
+  @media screen and (max-width: 1400px) {
+    font-size: 30px;
+  }
+  @media screen and (max-width: 980px) {
+    font-size: 24px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.smallest-title {
+  font-size: 24px;
+  font-weight: 500;
+  @media screen and (max-width: 1400px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 980px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.smaller-text {
+  font-size: 16px;
+  @media screen and (max-width: 1400px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
   }
 }

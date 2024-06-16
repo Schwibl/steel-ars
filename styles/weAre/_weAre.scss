@@ -1,14 +1,28 @@
 .we-are {
   padding: 20vh 0;
+  @media screen and (max-width: 1200px) {
+    padding: 10vh 0;
+  }
   .section__name {
     margin: 0 auto;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 20px;
+    }
   }
   .section__title {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 7rem;
+    @extend .bigger-title;
   }
   &__desc {
     text-align: center;
+  }
+  &__callback {
+    margin: 0 auto;
+    margin-top: 30px;
+    display: none;
+    @media screen and (max-width: 1200px) {
+      display: flex;
+    }
   }
 }

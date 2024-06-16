@@ -5,6 +5,9 @@
   }
   .section__title {
     text-align: center;
+    @media screen and (max-width: 500px) {
+      
+    }
   }
   &__head {
     margin-bottom: 40px;
@@ -15,20 +18,36 @@
     align-items: stretch;
     justify-content: flex-start;
     row-gap: 50px;
+    @media screen and (max-width: 980px) {
+      
+    }
   }
   &__item {
     margin-left: 50%;
     position: relative;
+    @media screen and (max-width: 980px) {
+      margin-left: 0;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+    }
   }
   &__i {
     position: absolute;
     right: calc(100% + 10px);
     top: 0;
     width: max-content;
+    color: #898989;
+    @media screen and (max-width: 980px) {
+      position: static;
+    }
   }
   &__name {
-    font-size: 36px;
-    text-transform: uppercase;
     line-height: 1;
+    @media screen and (max-width: 980px) {
+      text-align: center;
+    }
   }
 }

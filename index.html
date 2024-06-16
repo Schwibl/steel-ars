@@ -23,6 +23,12 @@
       <div class="header__logo">
         <img src="src/img/logo.png" alt="" class="header__logo-img" />
       </div>
+      <input
+        type="checkbox"
+        name="header__checkbox"
+        id="header__checkbox"
+        class="header__checkbox"
+      />
       <nav class="main-menu">
         <div class="main-menu__burger"></div>
         <ul class="main-menu__list">
@@ -43,7 +49,7 @@
           </li>
         </ul>
       </nav>
-      <button class="btn btn_blue">
+      <button class="btn btn_blue header__callback">
         <div class="btn__icon">
           <svg
             viewBox="0 0 20 20"
@@ -58,6 +64,7 @@
         </div>
         Заказать звонок
       </button>
+      <label for="header__checkbox" class="header__burger-label"></label>
     </header>
     <section class="we-are section">
       <div class="section__name">Стальной арсенал</div>
@@ -70,6 +77,21 @@
         <p>металлообработки производственной базы для юридических лиц</p>
         <p>и индивидуальных предпринимателей</p>
       </div>
+      <button class="btn btn_blue we-are__callback">
+        <div class="btn__icon">
+          <svg
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 14.9201V17.9201C20.0011 18.1986 19.9441 18.4743 19.8325 18.7294C19.7209 18.9846 19.5573 19.2137 19.3521 19.402C19.1469 19.5902 18.9046 19.7336 18.6407 19.8228C18.3769 19.912 18.0974 19.9452 17.82 19.9201C14.7428 19.5857 11.787 18.5342 9.18999 16.8501C6.77382 15.3148 4.72533 13.2663 3.18999 10.8501C1.49997 8.2413 0.448237 5.27109 0.119994 2.1801C0.0950046 1.90356 0.127869 1.62486 0.216495 1.36172C0.30512 1.09859 0.447565 0.856786 0.63476 0.651718C0.821955 0.44665 1.0498 0.282806 1.30379 0.170619C1.55777 0.0584315 1.83233 0.000358432 2.10999 9.69523e-05H5.10999C5.5953 -0.00467949 6.06579 0.167176 6.43376 0.48363C6.80173 0.800084 7.04207 1.23954 7.10999 1.7201C7.23662 2.68016 7.47144 3.62282 7.80999 4.5301C7.94454 4.88802 7.97366 5.27701 7.8939 5.65098C7.81415 6.02494 7.62886 6.36821 7.35999 6.6401L6.08999 7.9101C7.51355 10.4136 9.58645 12.4865 12.09 13.9101L13.36 12.6401C13.6319 12.3712 13.9751 12.1859 14.3491 12.1062C14.7231 12.0264 15.1121 12.0556 15.47 12.1901C16.3773 12.5286 17.3199 12.7635 18.28 12.8901C18.7658 12.9586 19.2094 13.2033 19.5265 13.5776C19.8437 13.9519 20.0122 14.4297 20 14.9201Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        Заказать звонок
+      </button>
     </section>
     <section class="fancy-painting section">
       <img src="src/img/fancy1.png" alt="" style="width: 100%" />
@@ -102,7 +124,7 @@
               <span class="features__num">[ 01 ]</span>
             </div>
             <div class="features__body">
-              <h2 class="features__title">
+              <h2 class="features__title smallest-title">
                 Комфортные
                 <br />
                 поставки
@@ -141,7 +163,7 @@
               <span class="features__num">[ 02 ]</span>
             </div>
             <div class="features__body">
-              <h2 class="features__title">
+              <h2 class="features__title smallest-title">
                 Собственный
                 <br />
                 автопарк
@@ -153,19 +175,6 @@
             </div>
           </li>
           <li class="features__item features__item_special">
-            <svg
-              class="features__svg-bg"
-              viewBox="0 0 850 392"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M5.85786 5.85786C0 11.7157 0 21.1438 0 40V352C0 370.856 0 380.284 5.85786 386.142C11.7157 392 21.1438 392 40 392H704C707.714 392 709.571 392 711.139 391.885C732.412 390.328 749.328 373.412 750.885 352.139C751 350.572 751 348.714 751 345C751 341.286 751 339.428 751.115 337.861C752.672 316.588 769.588 299.672 790.861 298.115C792.429 298 794.286 298 798 298H800.5C806.537 298 809.556 298 812.093 297.697C831.805 295.346 847.346 279.806 849.697 260.093C850 257.556 850 254.537 850 248.5V40C850 21.1438 850 11.7157 844.142 5.85786C838.284 0 828.856 0 810 0H40C21.1438 0 11.7157 0 5.85786 5.85786Z"
-                fill="#3548FE"
-              />
-            </svg>
             <div class="features__head">
               <div class="features__icon">
                 <svg
@@ -196,7 +205,7 @@
               <span class="features__num">[ 03 ]</span>
             </div>
             <div class="features__body">
-              <h2 class="features__title">
+              <h2 class="features__title smallest-title">
                 Широкий
                 <br />
                 ассортимент
@@ -274,7 +283,7 @@
             <li class="warranty__item">
               <div class="warranty__inum">[ 01 ]</div>
               <div class="warranty__point">10+</div>
-              <div class="warranty__idesc-main">Лет</div>
+              <div class="warranty__idesc-main smallest-title">Лет</div>
               <p class="warranty__idesc-small">
                 Опыта в данной <br />
                 сфере
@@ -283,7 +292,7 @@
             <li class="warranty__item">
               <div class="warranty__inum">[ 02 ]</div>
               <div class="warranty__point">36+</div>
-              <div class="warranty__idesc-main">Месяцев</div>
+              <div class="warranty__idesc-main smallest-title">Месяцев</div>
               <p class="warranty__idesc-small">
                 Опыта в данной <br />
                 сфере
@@ -292,7 +301,7 @@
             <li class="warranty__item">
               <div class="warranty__inum">[ 03 ]</div>
               <div class="warranty__point">20 000+</div>
-              <div class="warranty__idesc-main">Тонн</div>
+              <div class="warranty__idesc-main smallest-title">Тонн</div>
               <p class="warranty__idesc-small">
                 Реализуем <br />
                 ежегодно
@@ -317,40 +326,46 @@
         <ul class="services__list">
           <li class="services__item">
             <div class="services__i">[ 01 ]</div>
-            <p class="services__name">Механическая очистка труб</p>
+            <p class="services__name smaller-title">
+              Механическая очистка труб
+            </p>
           </li>
           <li class="services__item">
             <div class="services__i">[ 02 ]</div>
-            <p class="services__name">Пескоструйная обработка</p>
+            <p class="services__name smaller-title">Пескоструйная обработка</p>
           </li>
           <li class="services__item">
             <div class="services__i">[ 03 ]</div>
-            <p class="services__name">Нарезка фасок на трубах</p>
+            <p class="services__name smaller-title">Нарезка фасок на трубах</p>
           </li>
           <li class="services__item">
             <div class="services__i">[ 04 ]</div>
-            <p class="services__name">Изготовление конусных свай</p>
+            <p class="services__name smaller-title">
+              Изготовление конусных свай
+            </p>
           </li>
           <li class="services__item">
             <div class="services__i">[ 05 ]</div>
-            <p class="services__name">Сварка</p>
+            <p class="services__name smaller-title">Сварка</p>
           </li>
           <li class="services__item">
             <div class="services__i">[ 06 ]</div>
-            <p class="services__name">
+            <p class="services__name smaller-title">
               Ремонт и восстановление металлопроката (правка неровностей,
               шлифовка, устранение коррозий, правка эллипсов на трубах)
             </p>
           </li>
           <li class="services__item">
             <div class="services__i">[ 07 ]</div>
-            <p class="services__name">
+            <p class="services__name smaller-title">
               Нанесение антикоррозийных лакокрасочных материалов
             </p>
           </li>
           <li class="services__item">
             <div class="services__i">[ 08 ]</div>
-            <p class="services__name">Изготовление металлических конструкций</p>
+            <p class="services__name smaller-title">
+              Изготовление металлических конструкций
+            </p>
           </li>
         </ul>
       </div>
@@ -694,9 +709,6 @@
           </ul>
           <div class="catalog__display">
             <img src="./src/img/catalogue1.png" alt="" class="catalog__img" />
-            <a href="#" class="btn btn_blue catalog__main-link" id="catalog"
-              >Каталог</a
-            >
           </div>
         </div>
       </div>
@@ -713,7 +725,7 @@
           <div class="footer__half">
             <div class="footer__element">
               <div class="footer__name">Как связаться</div>
-              <div class="footer__data">
+              <div class="footer__data smaller-title">
                 +7 (800) 444-00-45
                 <br />
                 zakaz@stars16.ru
@@ -721,7 +733,7 @@
             </div>
             <div class="footer__element">
               <div class="footer__name">Локация</div>
-              <div class="footer__data">
+              <div class="footer__data smaller-title">
                 Казань,
                 <br />
                 ул. Алебастровая, 11
@@ -731,7 +743,7 @@
           <div class="footer__half">
             <div class="footer__element">
               <div class="footer__name">Социальные сети</div>
-              <div class="footer__data">
+              <div class="footer__data smaller-title">
                 <div class="socials">
                   <ul class="socials__list">
                     <li class="socials__item">

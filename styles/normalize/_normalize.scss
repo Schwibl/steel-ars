@@ -10,8 +10,14 @@
 }
 html {
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
   scroll-behavior: smooth;
+  @media screen and (max-width: 1400px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 980px) {
+    font-size: 14px;
+  }
 }
 body {
   overflow-y: scroll;
@@ -20,7 +26,7 @@ body {
   margin: 0;
   background-color: #000;
   color: #fff;
-  font-size: 16px;
+  text-transform: uppercase;
   height: 100vh;
   padding-bottom: 30px;
   font-family: "Inter", sans-serif;

@@ -6,12 +6,24 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 20px;
+    @media screen and (max-width: 724px) {
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+    @media screen and (max-width: 550px) {
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
   &__item {
     background-color: #000;
     border-radius: 20px;
     padding: 40px;
     width: 300px;
+    @media screen and (max-width: 724px) {
+      width: 200px;
+    }
   }
   &__link {
     display: flex;
@@ -26,5 +38,14 @@
   }
   &__name {
     font-size: 18px;
+    @media screen and (max-width: 1400px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 980px) {
+      font-size: 14px;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 12px;
+    }
   }
 }

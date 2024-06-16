@@ -1,7 +1,6 @@
 .btn {
   color: #fff;
-  font-size: 16px;
-  text-transform: uppercase;
+  @extend .smaller-text;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -12,6 +11,21 @@
   border-radius: 20px;
   transition: .3s all ease;
   position: relative;
+  @media screen and (max-width: 1800px) {
+    padding: 15px 30px;
+  }
+  @media screen and (max-width: 1400px) {
+    padding: 15px 20px;
+    border-radius: 14px;
+  }
+  @media screen and (max-width: 980px) {
+    padding: 10px 15px;
+    gap: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 10px 10px;
+    gap: 15px;
+  }
   &:hover {
     transform: scale(1.2);
     background-color: #898989;
