@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Стальной арсенал - главная</title>
+    <title>Стальной арсенал - трубы Б/У - 159X5</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,33 +17,40 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/css/main.css" />
+    <script src="https://unpkg.com/imask"></script>
   </head>
   <body>
     <header class="header">
       <div class="header__logo">
         <img src="src/img/logo.png" alt="" class="header__logo-img" />
       </div>
+      <input
+        type="checkbox"
+        name="header__checkbox"
+        id="header__checkbox"
+        class="header__checkbox"
+      />
       <nav class="main-menu">
         <div class="main-menu__burger"></div>
         <ul class="main-menu__list">
-          <li class="main-menu__item btn btn_active">
+          <li class="main-menu__item">
             <a href="index.html" class="main-menu__link"> Главная </a>
           </li>
           <li class="main-menu__item">
-            <a href="#" class="main-menu__link"> О нас </a>
+            <a href="index.html#about-us" class="main-menu__link"> О нас </a>
           </li>
           <li class="main-menu__item">
-            <a href="#" class="main-menu__link"> Услуги </a>
+            <a href="index.html#services" class="main-menu__link"> Услуги </a>
           </li>
-          <li class="main-menu__item">
+          <li class="main-menu__item btn btn_active">
             <a href="catalog_main.html" class="main-menu__link"> Каталог </a>
           </li>
           <li class="main-menu__item">
-            <a href="#" class="main-menu__link"> Контакты </a>
+            <a href="#contacts" class="main-menu__link"> Контакты </a>
           </li>
         </ul>
       </nav>
-      <button class="btn btn_blue">
+      <button class="btn btn_blue header__callback summon-form-btn">
         <div class="btn__icon">
           <svg
             viewBox="0 0 20 20"
@@ -58,6 +65,7 @@
         </div>
         Заказать звонок
       </button>
+      <label for="header__checkbox" class="header__burger-label"></label>
     </header>
     <section class="catalog section">
       <div class="container">
@@ -65,7 +73,7 @@
           <div class="catalog__legend">
             <div class="catalog__back">
               <div class="catalog__selected-region">Татарстан</div>
-              <a href="" class="catalog__back-link">
+              <a href="catalog_main.html" class="catalog__back-link">
                 <div class="catalog__back-icon">
                   <svg
                     viewBox="0 0 21 10"
@@ -104,7 +112,9 @@
                 </li>
               </ul>
             </div>
-            <div class="btn btn_blue idisplay__order-btn">Заказать</div>
+            <button class="btn btn_blue idisplay__order-btn summon-form-btn">
+              Заказать
+            </button>
           </div>
           <div class="idisplay__body">
             <h2 class="idisplay__desc-heading smaller-title">
@@ -220,7 +230,7 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="container">
         <div class="section__name">Контакты</div>
         <div class="section__title">
@@ -351,5 +361,46 @@
         </div>
       </div>
     </footer>
+    <div class="pop-up">
+      <div class="pop-up__msg pop-up__msg_success">Сообщение отправлено! Наш менеджер свяжется с вами в ближайшее время. Можете закрыть это окно и продолжить изучать наш сайт.</div>
+      <div class="pop-up__msg pop-up__msg_error">Что-то пошло не так. Попробуйте повторить попытку позднее или свяжитесь с нами через наши социальные сети</div>
+      <div class="pop-up__wrapper pop-up__wrapper_active">
+          <button class="pop-up__close-btn">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 10L30 30" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10 30L30 10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              
+          </button>
+          <div class="pop-up__title smaller-title">Заказать звонок</div>
+          <div class="pop-up__inps pop-up__inps_active">
+            <input type="text" class="inp pop-up__inp pop-up__name-inp" placeholder="Ваше имя"></input>
+            <input type="tel" class="inp pop-up__inp pop-up__phone-inp" placeholder="+7 (999) 999-99-99" pattern="+7([0-9]{3})-[0-9]{3}-[0-9]{4}"></input>
+            <div class="pop-up__textarea">
+              <textarea class="inp pop-up__inp pop-up__textarea-inp" id="" placeholder="Можете добавить комментарий, например удобное время звонка" rows="5"></textarea>
+              <div class="pop-up__textarea-symb-counter"> <span class="pop-up__textarea-symb-counter-current"> 0 </span> / 3000</div>
+            </div>
+            <ul class="pop-up__radio-list">
+              <li class="pop-up__radio-item">
+                <label class="pop-up__radio-label">
+                  <input type="radio" name="pop-up__radio" id="" class="pop-up__radio-inp pop-up__radio-inp_telegram" value="telegram" checked>
+                  <div class="pop-up__radio-visual"></div>
+                  <span class="pop-up__radio-text smaller-text">Напишите в Telegram</span>
+                </label>
+              </li>
+              <li class="pop-up__radio-item">
+                <label class="pop-up__radio-label">
+                  <input type="radio" name="pop-up__radio" id="" class="pop-up__radio-inp pop-up__radio-inp_whatsapp" value="whatsapp">
+                  <div class="pop-up__radio-visual"></div>
+                  <span class="pop-up__radio-text smaller-text">Напишите в WhatsApp</span>
+                </label>
+              </li>
+            </ul>
+            <button class="btn btn_blue pop-up__send-btn pop-up__send-btn_active">Отправить</button>
+          </div>
+          <div class="pop-up__loading-animation"><img src="./src/img/loading.gif" alt="" class="pop-up__loading-animation-img"></div>
+        </div>
+    </div>
+    <script src="src/js/main.js"></script>
   </body>
 </html>

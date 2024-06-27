@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/css/main.css" />
+    <script src="https://unpkg.com/imask"></script>
   </head>
   <body>
     <header class="header">
@@ -36,20 +37,20 @@
             <a href="index.html" class="main-menu__link"> Главная </a>
           </li>
           <li class="main-menu__item">
-            <a href="#" class="main-menu__link"> О нас </a>
+            <a href="#about-us" class="main-menu__link"> О нас </a>
           </li>
           <li class="main-menu__item">
-            <a href="#" class="main-menu__link"> Услуги </a>
+            <a href="#services" class="main-menu__link"> Услуги </a>
           </li>
           <li class="main-menu__item">
             <a href="catalog_main.html" class="main-menu__link"> Каталог </a>
           </li>
           <li class="main-menu__item">
-            <a href="#" class="main-menu__link"> Контакты </a>
+            <a href="#contacts" class="main-menu__link"> Контакты </a>
           </li>
         </ul>
       </nav>
-      <button class="btn btn_blue header__callback">
+      <button class="btn btn_blue header__callback summon-form-btn">
         <div class="btn__icon">
           <svg
             viewBox="0 0 20 20"
@@ -77,7 +78,7 @@
         <p>металлообработки производственной базы для юридических лиц</p>
         <p>и индивидуальных предпринимателей</p>
       </div>
-      <button class="btn btn_blue we-are__callback">
+      <button class="btn btn_blue summon-form-btn we-are__callback">
         <div class="btn__icon">
           <svg
             viewBox="0 0 20 20"
@@ -239,7 +240,7 @@
         </ul>
       </div>
     </section>
-    <section class="about-us section">
+    <section class="about-us section" id="about-us">
       <div class="container">
         <div class="section__name">О нас</div>
         <h2 class="section__title">
@@ -311,7 +312,7 @@
         </div>
       </div>
     </section>
-    <section class="services section">
+    <section class="services section" id="services">
       <div class="container">
         <div class="services__head">
           <div class="section__name">Услуги</div>
@@ -377,9 +378,11 @@
         <div class="catalog__wrapper">
           <ul class="catalog__list">
             <li class="catalog__item catalog__item_active">
-              <span class="catalog__i">[ 01 ]</span>
-              <span class="catalog__name">Трубы б/у</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 01 ]</span>
+                <span class="catalog__name">Трубы б/у</span>
+              </a>  
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -399,9 +402,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 02 ]</span>
-              <span class="catalog__name">Трубы восстановленые</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 02 ]</span>
+                <span class="catalog__name">Трубы восстановленые</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -421,9 +426,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 03 ]</span>
-              <span class="catalog__name">Трубы лежалые</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 03 ]</span>
+                <span class="catalog__name">Трубы лежалые</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -443,9 +450,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 04 ]</span>
-              <span class="catalog__name">Трубы новые</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 04 ]</span>
+                <span class="catalog__name">Трубы новые</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -465,9 +474,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 05 ]</span>
-              <span class="catalog__name">Трубы НКТ</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 05 ]</span>
+                <span class="catalog__name">Трубы НКТ</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -487,9 +498,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 06 ]</span>
-              <span class="catalog__name">Трубы профильные</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 06 ]</span>
+                <span class="catalog__name">Трубы профильные</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -509,9 +522,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 07 ]</span>
-              <span class="catalog__name">Арматура</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 07 ]</span>
+                <span class="catalog__name">Арматура</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -531,9 +546,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 08 ]</span>
-              <span class="catalog__name">Круг</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 08 ]</span>
+                <span class="catalog__name">Круг</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -553,9 +570,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 09 ]</span>
-              <span class="catalog__name">Квадрат</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 09 ]</span>
+                <span class="catalog__name">Квадрат</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -575,9 +594,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 10 ]</span>
-              <span class="catalog__name">Уголок</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 10 ]</span>
+                <span class="catalog__name">Уголок</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -597,9 +618,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 11 ]</span>
-              <span class="catalog__name">Балка</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 11 ]</span>
+                <span class="catalog__name">Балка</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -619,9 +642,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 12 ]</span>
-              <span class="catalog__name">Швеллер</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 12 ]</span>
+                <span class="catalog__name">Швеллер</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -641,9 +666,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 13 ]</span>
-              <span class="catalog__name">Шпунт Ларсена</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 13 ]</span>
+                <span class="catalog__name">Шпунт Ларсена</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -663,9 +690,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 14 ]</span>
-              <span class="catalog__name">Лист</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 14 ]</span>
+                <span class="catalog__name">Лист</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -685,9 +714,11 @@
               </a>
             </li>
             <li class="catalog__item">
-              <span class="catalog__i">[ 15 ]</span>
-              <span class="catalog__name">Полоса</span>
-              <a href="#" class="catalog__item-link"
+              <a href="catalog_main.html" class="catalog__item-category-link">
+                <span class="catalog__i">[ 15 ]</span>
+                <span class="catalog__name">Полоса</span>
+              </a>
+              <a href="catalog_spec.html" class="catalog__item-link"
                 ><svg
                   viewBox="0 0 22 22"
                   fill="none"
@@ -713,7 +744,7 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="container">
         <div class="section__name">Контакты</div>
         <div class="section__title">
@@ -844,5 +875,46 @@
         </div>
       </div>
     </footer>
+    <div class="pop-up">
+      <div class="pop-up__msg pop-up__msg_success">Сообщение отправлено! Наш менеджер свяжется с вами в ближайшее время. Можете закрыть это окно и продолжить изучать наш сайт.</div>
+      <div class="pop-up__msg pop-up__msg_error">Что-то пошло не так. Попробуйте повторить попытку позднее или свяжитесь с нами через наши социальные сети</div>
+      <div class="pop-up__wrapper pop-up__wrapper_active">
+          <button class="pop-up__close-btn">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 10L30 30" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10 30L30 10" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              
+          </button>
+          <div class="pop-up__title smaller-title">Заказать звонок</div>
+          <div class="pop-up__inps pop-up__inps_active">
+            <input type="text" class="inp pop-up__inp pop-up__name-inp" placeholder="Ваше имя"></input>
+            <input type="tel" class="inp pop-up__inp pop-up__phone-inp" placeholder="+7 (999) 999-99-99" pattern="+7([0-9]{3})-[0-9]{3}-[0-9]{4}"></input>
+            <div class="pop-up__textarea">
+              <textarea class="inp pop-up__inp pop-up__textarea-inp" id="" placeholder="Можете добавить комментарий, например удобное время звонка" rows="5"></textarea>
+              <div class="pop-up__textarea-symb-counter"> <span class="pop-up__textarea-symb-counter-current"> 0 </span> / 3000</div>
+            </div>
+            <ul class="pop-up__radio-list">
+              <li class="pop-up__radio-item">
+                <label class="pop-up__radio-label">
+                  <input type="radio" name="pop-up__radio" id="" class="pop-up__radio-inp pop-up__radio-inp_telegram" value="telegram" checked>
+                  <div class="pop-up__radio-visual"></div>
+                  <span class="pop-up__radio-text smaller-text">Напишите в Telegram</span>
+                </label>
+              </li>
+              <li class="pop-up__radio-item">
+                <label class="pop-up__radio-label">
+                  <input type="radio" name="pop-up__radio" id="" class="pop-up__radio-inp pop-up__radio-inp_whatsapp" value="whatsapp">
+                  <div class="pop-up__radio-visual"></div>
+                  <span class="pop-up__radio-text smaller-text">Напишите в WhatsApp</span>
+                </label>
+              </li>
+            </ul>
+            <button class="btn btn_blue pop-up__send-btn pop-up__send-btn_active">Отправить</button>
+          </div>
+          <div class="pop-up__loading-animation"><img src="./src/img/loading.gif" alt="" class="pop-up__loading-animation-img"></div>
+        </div>
+    </div>
+    <script src="src/js/main.js"></script>
   </body>
 </html>

@@ -113,12 +113,28 @@
     align-items: center;
     justify-content: space-between;
     column-gap: 20px;
+    @media screen and (max-width: 600px) {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      row-gap: 30px;
+    }
   }
   &__page-title {
     margin-left: 0 !important;
   }
   &__page-desc {
-    max-width: 515px;
+    width: 50%;
+    p {
+      max-width: 515px;
+    }
+    @media screen and (max-width: 600px) {
+      width: auto;
+      p {
+        max-width: unset;
+      }
+    }
   }
   &__regions-legend {
     color: #898989;
