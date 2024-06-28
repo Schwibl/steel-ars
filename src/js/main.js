@@ -9,6 +9,8 @@ let popUp = {
   nameInp: document.querySelector(".pop-up__name-inp"),
   phoneInp: document.querySelector(".pop-up__phone-inp"),
   textArea: document.querySelector(".pop-up__textarea-inp"),
+  timeInp: document.querySelector(".pop-up__time-inp"),
+  callRadio: document.querySelector(".pop-up__radio-inp_call"),
   whatsAppRadio: document.querySelector(".pop-up__radio-inp_whatsapp"),
   telegramRadio: document.querySelector(".pop-up__radio-inp_telegram"),
   counter: document.querySelector(".pop-up__textarea-symb-counter-current"),
@@ -128,6 +130,17 @@ async function sendAnswer({ difficulty, seed, signature, timestamp, key }) {
 }
 
 async function sendData(session) {
+  let data = {
+    title: document.title,
+    name: popUp.nameInp.value,
+    method: document.querySelector(".pop-up__radio-inp:checked").value,
+    contact: popUp.phoneInp.value,
+    text: popUp.textArea.value,
+    session: session,
+  };
+  if (popUp.timeInp.value) {
+    data.time = popUp.timeInp.value;
+  }
   const response = await fetch(`${BASE_URL}/send`, {
     method: "POST", // *GET, POST, PUT, DELETE, etc.
     mode: "cors", // no-cors, *cors, same-origin
@@ -139,14 +152,7 @@ async function sendData(session) {
     },
     redirect: "follow", // manual, *follow, error
     referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-    body: JSON.stringify({
-      title: document.title,
-      name: popUp.nameInp.value,
-      method: document.querySelector(".pop-up__radio-inp:checked").value,
-      contact: popUp.phoneInp.value,
-      text: popUp.textArea.value,
-      session: session,
-    }), // body data type must match "Content-Type" header
+    body: JSON.stringify(data), // body data type must match "Content-Type" header
   });
   if (response.status == 200) {
     setStep("success");
@@ -200,6 +206,16 @@ popUp.textArea.addEventListener("input", () => {
       .querySelector(".pop-up__textarea-symb-counter")
       .classList.remove("pop-up__textarea-symb-counter_alarm");
   }
+});
+
+[popUp.callRadio, popUp.telegramRadio, popUp.whatsAppRadio].forEach((radio) => {
+  radio.addEventListener("change", () => {
+    if (document.querySelector(".pop-up__radio-inp:checked").value == "call") {
+      popUp.timeInp.classList.add("pop-up__time-inp_active");
+    } else {
+      popUp.timeInp.classList.remove("pop-up__time-inp_active");
+    }
+  });
 });
 
 document

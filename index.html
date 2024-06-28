@@ -878,7 +878,7 @@
     <div class="pop-up">
       <div class="pop-up__msg pop-up__msg_success">Сообщение отправлено! Наш менеджер свяжется с вами в ближайшее время. Можете закрыть это окно и продолжить изучать наш сайт.</div>
       <div class="pop-up__msg pop-up__msg_error">Что-то пошло не так. Попробуйте повторить попытку позднее или свяжитесь с нами через наши социальные сети</div>
-      <div class="pop-up__wrapper pop-up__wrapper_active">
+      <div class="pop-up__wrapper">
           <button class="pop-up__close-btn">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10 10L30 30" stroke="white" stroke-width="2" stroke-linecap="round"/>
@@ -890,11 +890,14 @@
           <div class="pop-up__inps pop-up__inps_active">
             <input type="text" class="inp pop-up__inp pop-up__name-inp" placeholder="Ваше имя"></input>
             <input type="tel" class="inp pop-up__inp pop-up__phone-inp" placeholder="+7 (999) 999-99-99" pattern="+7([0-9]{3})-[0-9]{3}-[0-9]{4}"></input>
-            <div class="pop-up__textarea">
-              <textarea class="inp pop-up__inp pop-up__textarea-inp" id="" placeholder="Можете добавить комментарий, например удобное время звонка" rows="5"></textarea>
-              <div class="pop-up__textarea-symb-counter"> <span class="pop-up__textarea-symb-counter-current"> 0 </span> / 3000</div>
-            </div>
             <ul class="pop-up__radio-list">
+              <li class="pop-up__radio-item">
+                <label class="pop-up__radio-label">
+                  <input type="radio" name="pop-up__radio" id="" class="pop-up__radio-inp pop-up__radio-inp_call" value="call" checked>
+                  <div class="pop-up__radio-visual"></div>
+                  <span class="pop-up__radio-text smaller-text">Позвоните</span>
+                </label>
+              </li>
               <li class="pop-up__radio-item">
                 <label class="pop-up__radio-label">
                   <input type="radio" name="pop-up__radio" id="" class="pop-up__radio-inp pop-up__radio-inp_telegram" value="telegram" checked>
@@ -910,6 +913,34 @@
                 </label>
               </li>
             </ul>
+            <input type="text" class="inp pop-up__inp pop-up__time-inp" placeholder="Когда с вами связаться"></input>
+            <div class="pop-up__textarea">
+              <textarea class="inp pop-up__inp pop-up__textarea-inp" id="" placeholder="Можете добавить комментарий, например удобное время звонка" rows="5"></textarea>
+              <div class="pop-up__textarea-symb-counter"> <span class="pop-up__textarea-symb-counter-current"> 0 </span> / 3000</div>
+            </div>
+            <!-- <ul class="pop-up__radio-list">
+              <li class="pop-up__radio-item">
+                <label class="pop-up__radio-label">
+                  <input type="radio" name="pop-up__radio" id="" class="pop-up__radio-inp pop-up__radio-inp_call" value="call" checked>
+                  <div class="pop-up__radio-visual"></div>
+                  <span class="pop-up__radio-text smaller-text">Позвоните</span>
+                </label>
+              </li>
+              <li class="pop-up__radio-item">
+                <label class="pop-up__radio-label">
+                  <input type="radio" name="pop-up__radio" id="" class="pop-up__radio-inp pop-up__radio-inp_telegram" value="telegram" checked>
+                  <div class="pop-up__radio-visual"></div>
+                  <span class="pop-up__radio-text smaller-text">Напишите в Telegram</span>
+                </label>
+              </li>
+              <li class="pop-up__radio-item">
+                <label class="pop-up__radio-label">
+                  <input type="radio" name="pop-up__radio" id="" class="pop-up__radio-inp pop-up__radio-inp_whatsapp" value="whatsapp">
+                  <div class="pop-up__radio-visual"></div>
+                  <span class="pop-up__radio-text smaller-text">Напишите в WhatsApp</span>
+                </label>
+              </li>
+            </ul> -->
             <button class="btn btn_blue pop-up__send-btn pop-up__send-btn_active">Отправить</button>
           </div>
           <div class="pop-up__loading-animation"><img src="./src/img/loading.gif" alt="" class="pop-up__loading-animation-img"></div>
