@@ -324,6 +324,7 @@
   }
   &__desc-text {
     columns: 2;
+    white-space: pre-line;
     @media screen and (max-width: 800px) {
       columns: 1;
     }
@@ -333,7 +334,7 @@
   }
   &__otheri-list {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: flex-start;
     justify-content: space-around;
     gap: 1vw;    
