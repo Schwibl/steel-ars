@@ -323,6 +323,7 @@
     margin-bottom: 5vh;
   }
   &__desc-text {
+    text-transform: none;
     columns: 2;
     white-space: pre-line;
     @media screen and (max-width: 800px) {
